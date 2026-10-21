@@ -1,0 +1,46 @@
+.side-nav {
+  position: fixed;
+  z-index: 20;
+  top: 50%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  transform: translateY(-50%);
+}
+
+.side-nav__item {
+  position: relative;
+  padding: 8px 32px 8px 24px;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  transition: color 0.2s;
+}
+
+.side-nav__item:hover {
+  color: var(--ink);
+}
+
+.side-nav__item.is-active {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* rotated 180deg, so "left" renders on the right edge */
+.side-nav__item.is-active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  background: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .side-nav {
+    display: none;
+  }
+}

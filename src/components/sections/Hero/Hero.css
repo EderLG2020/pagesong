@@ -1,0 +1,126 @@
+.hero-section {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  padding: 48px 96px 48px var(--gutter-left);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero__title {
+  margin: 0 0 32px;
+  font-size: clamp(2.4rem, 4.6vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+
+.hero__text {
+  margin: 0 0 56px;
+  font-size: 0.85rem;
+  line-height: 1.9;
+  color: var(--ink-soft);
+}
+
+/* ---------- Image ---------- */
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+/* expects a transparent PNG/WebP so the shadow follows the silhouette */
+.hero-image__img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  object-fit: contain;
+  /* wide soft cast shadow + tight contact shadow */
+  filter: drop-shadow(14px 26px 22px rgba(0, 0, 0, 0.35))
+    drop-shadow(4px 8px 6px rgba(0, 0, 0, 0.25));
+}
+
+.hero-image__placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1;
+  border: 2px dashed var(--line);
+  border-radius: 50%;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.hero-image__placeholder span {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ink);
+}
+
+.hero-image__placeholder small {
+  font-size: 0.75rem;
+}
+
+/* ---------- Contact ---------- */
+.contact {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding-left: 32px;
+  border-left: 3px solid var(--ink);
+  min-height: 40px;
+}
+
+.contact__phone {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.contact__address {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    padding: 24px 16px 32px;
+    gap: 32px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .hero-image__img,
+  .hero-image__placeholder {
+    max-width: 320px;
+  }
+
+  .hero__text {
+    margin-bottom: 32px;
+  }
+
+  .contact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding-left: 16px;
+  }
+}

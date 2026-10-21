@@ -1,0 +1,18 @@
+{
+  "title": "Vivimos para el buen sonido",
+  "paragraphs": [
+    "Nacimos con una idea simple: que todos puedan escuchar su música como el artista la imaginó. Seleccionamos cada producto por su calidad de audio, su diseño y su durabilidad.",
+    "Hoy acompañamos a miles de personas en todo el mundo, desde quienes buscan sus primeros audífonos hasta productores que necesitan precisión en cada nota."
+  ],
+  "stats": [
+    { "value": "10+", "label": "años en el mercado" },
+    { "value": "50k", "label": "clientes felices" },
+    { "value": "30", "label": "países con envío" },
+    { "value": "4.8", "label": "calificación promedio" }
+  ],
+  "values": [
+    { "title": "Calidad", "text": "Probamos cada equipo antes de que llegue a tus manos." },
+    { "title": "Cercanía", "text": "Te asesoramos para que elijas el sonido ideal para ti." },
+    { "title": "Confianza", "text": "Garantía real y devoluciones sin complicaciones." }
+  ]
+}

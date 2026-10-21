@@ -1,0 +1,33 @@
+.odometer__track {
+  display: inline-flex;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}
+
+.odometer__digit {
+  display: inline-block;
+  height: 1em;
+  overflow: hidden;
+}
+
+.odometer__strip {
+  display: flex;
+  flex-direction: column;
+  /* each strip holds 20 digits, so one digit = 5% of its height */
+  transition: transform var(--duration, 1.4s) cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+}
+
+.odometer__strip > span {
+  height: 1em;
+}
+
+.is-visible .odometer__strip {
+  transform: translateY(calc(var(--target) * -5%));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .odometer__strip {
+    transform: translateY(calc(var(--target) * -5%));
+    transition: none;
+  }
+}

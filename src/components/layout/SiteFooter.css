@@ -1,0 +1,12 @@
+.site-footer {
+  padding: 32px var(--gutter-left);
+  background: var(--ink);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .site-footer {
+    padding-block: 24px;
+  }
+}

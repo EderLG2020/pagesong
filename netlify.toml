@@ -1,0 +1,31 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# VITE_* values are public (they end up in the bundle), so they live here
+# instead of the git-ignored .env. Override them in the Netlify UI if needed.
+[build.environment]
+  NODE_VERSION = "22"
+  VITE_HERO_IMAGE = "/images/headphones.png"
+  VITE_BRAND_NAME = "Pagesong"
+  VITE_CONTACT_PHONE = "+01 800 25923857"
+  VITE_CONTACT_ADDRESS = "100 Main St, New York NY 10002, USA"
+  VITE_PRODUCTS_SOURCE = "api"
+  VITE_CACHE_TTL_MINUTES = "30"
+
+# Hashed bundles never change: cache for a year.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+# Editable content: always revalidate so JSON edits show up on deploy.
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

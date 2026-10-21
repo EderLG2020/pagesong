@@ -1,0 +1,52 @@
+[
+  {
+    "id": 101,
+    "name": "AirPods Max",
+    "brand": "Apple",
+    "description": "Audífonos over-ear premium con audio de alta fidelidad, ecualización adaptativa y cancelación activa de ruido.",
+    "price": 549.99,
+    "discountPercentage": 13.67,
+    "rating": 3.47,
+    "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods-max-silver/thumbnail.webp"
+  },
+  {
+    "id": 100,
+    "name": "AirPods",
+    "brand": "Apple",
+    "description": "Audio inalámbrico sin complicaciones: emparejamiento instantáneo, gran sonido y Siri integrado para escuchar donde vayas.",
+    "price": 129.99,
+    "discountPercentage": 15.54,
+    "rating": 4.15,
+    "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-airpods/thumbnail.webp"
+  },
+  {
+    "id": 107,
+    "name": "Beats Flex",
+    "brand": "Beats",
+    "description": "Audífonos inalámbricos ligeros con imanes que se unen al no usarlos y hasta 12 horas de batería.",
+    "price": 49.99,
+    "discountPercentage": 5.73,
+    "rating": 4.24,
+    "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/beats-flex-wireless-earphones/thumbnail.webp"
+  },
+  {
+    "id": 103,
+    "name": "HomePod mini",
+    "brand": "Apple",
+    "description": "Bocina inteligente compacta con un sonido sorprendente que se integra con todo tu ecosistema Apple.",
+    "price": 99.99,
+    "discountPercentage": 18.1,
+    "rating": 4.62,
+    "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/apple-homepod-mini-cosmic-grey/thumbnail.webp"
+  },
+  {
+    "id": 99,
+    "name": "Echo Plus",
+    "brand": "Amazon",
+    "description": "Bocina inteligente con Alexa, sonido premium y centro de control para los dispositivos de tu hogar.",
+    "price": 99.99,
+    "discountPercentage": 12.07,
+    "rating": 4.99,
+    "image": "https://cdn.dummyjson.com/product-images/mobile-accessories/amazon-echo-plus/thumbnail.webp"
+  }
+]

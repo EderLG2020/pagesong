@@ -1,0 +1,41 @@
+[
+  {
+    "id": "basico",
+    "name": "Básico",
+    "price": 0,
+    "period": "siempre",
+    "description": "Para quienes compran de vez en cuando.",
+    "features": ["Envío estándar", "Garantía de 1 año", "Soporte por correo"],
+    "cta": "Empezar gratis"
+  },
+  {
+    "id": "premium",
+    "name": "Premium",
+    "price": 9.99,
+    "period": "mes",
+    "description": "Lo mejor del sonido sin pagar envíos.",
+    "features": [
+      "Envío gratis en todos tus pedidos",
+      "Garantía extendida de 2 años",
+      "10% de descuento en productos",
+      "Soporte prioritario"
+    ],
+    "cta": "Elegir Premium",
+    "highlighted": true
+  },
+  {
+    "id": "studio",
+    "name": "Studio",
+    "price": 19.99,
+    "period": "mes",
+    "description": "Para músicos, creadores y audiófilos.",
+    "features": [
+      "Todo lo de Premium",
+      "Garantía de 3 años",
+      "20% de descuento en productos",
+      "Prueba equipos 14 días en casa",
+      "Asesoría de audio personalizada"
+    ],
+    "cta": "Elegir Studio"
+  }
+]
