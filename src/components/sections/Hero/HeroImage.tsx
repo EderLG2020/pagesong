@@ -1,5 +1,12 @@
 import { useState } from 'react'
 
+// Intrinsic size of the default image; only reserves layout space (CLS).
+const WIDTH = 358
+const HEIGHT = 370
+
+// React 18 doesn't know `fetchPriority` yet; the lowercase attribute passes through.
+const highPriority = { fetchpriority: 'high' } as Record<string, string>
+
 type Props = { src: string | null; alt: string }
 
 export function HeroImage({ src, alt }: Props) {
@@ -14,5 +21,16 @@ export function HeroImage({ src, alt }: Props) {
     )
   }
 
-  return <img className="hero-image__img" src={src} alt={alt} onError={() => setFailed(true)} />
+  return (
+    <img
+      className="hero-image__img"
+      src={src}
+      alt={alt}
+      width={WIDTH}
+      height={HEIGHT}
+      decoding="async"
+      {...highPriority}
+      onError={() => setFailed(true)}
+    />
+  )
 }

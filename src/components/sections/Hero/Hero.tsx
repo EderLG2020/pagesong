@@ -16,7 +16,7 @@ export function Hero({ active }: Props) {
 
       <div className="hero">
         <div className="hero__content">
-          <h1 className="hero__title enter" style={enterDelay(100)}>
+          <h1 className="hero__title enter enter--lcp" style={enterDelay(100)}>
             Ritmo y sonido
             <br />
             por todo el mundo
@@ -34,7 +34,7 @@ export function Hero({ active }: Props) {
           </div>
         </div>
 
-        <div className="hero-image enter enter--scale" style={enterDelay(150)}>
+        <div className="hero-image enter enter--scale enter--lcp" style={enterDelay(150)}>
           <HeroImage src={config.heroImage} alt="Audífonos inalámbricos negros" />
         </div>
       </div>

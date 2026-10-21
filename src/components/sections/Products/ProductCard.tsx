@@ -13,7 +13,7 @@ export function ProductCard({ product, index }: Props) {
     <article ref={ref} className="product reveal" style={revealDelay(index)}>
       <div className="product__media">
         {discount > 0 && <span className="product__discount">-{discount}%</span>}
-        <img src={product.image} alt={product.name} loading="lazy" decoding="async" />
+        <img src={product.image} alt={product.name} width={300} height={300} loading="lazy" decoding="async" />
       </div>
       <span className="product__brand">{product.brand}</span>
       <h3 className="product__name">{product.name}</h3>

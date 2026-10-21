@@ -3,6 +3,7 @@ import { getProducts } from '../../../services/data'
 import { AsyncContent } from '../../ui/AsyncContent'
 import { Section } from '../../ui/Section'
 import { ProductCard } from './ProductCard'
+import { ProductsJsonLd } from './ProductsJsonLd'
 import './Products.css'
 
 export function Products() {
@@ -18,11 +19,14 @@ export function Products() {
     >
       <AsyncContent state={products}>
         {(data) => (
-          <div className="products">
-            {data.map((product, index) => (
-              <ProductCard key={product.id} product={product} index={index} />
-            ))}
-          </div>
+          <>
+            <div className="products">
+              {data.map((product, index) => (
+                <ProductCard key={product.id} product={product} index={index} />
+              ))}
+            </div>
+            <ProductsJsonLd products={data} />
+          </>
         )}
       </AsyncContent>
     </Section>

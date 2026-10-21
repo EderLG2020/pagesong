@@ -6,7 +6,8 @@
 # instead of the git-ignored .env. Override them in the Netlify UI if needed.
 [build.environment]
   NODE_VERSION = "22"
-  VITE_HERO_IMAGE = "/images/headphones.png"
+  VITE_SITE_URL = "https://pagesong.netlify.app"
+  VITE_HERO_IMAGE = "/images/headphones.webp"
   VITE_BRAND_NAME = "Pagesong"
   VITE_CONTACT_PHONE = "+01 800 25923857"
   VITE_CONTACT_ADDRESS = "100 Main St, New York NY 10002, USA"

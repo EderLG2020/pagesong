@@ -47,6 +47,30 @@
   animation-duration: 0.9s;
 }
 
+/*
+ * LCP candidates (hero title + image) must be painted on the first frame:
+ * starting at opacity 0 delays Largest Contentful Paint. Move only.
+ */
+@keyframes rise {
+  from {
+    transform: translateY(16px);
+  }
+}
+
+@keyframes settle {
+  from {
+    transform: scale(0.96);
+  }
+}
+
+.enter--lcp {
+  animation-name: rise;
+}
+
+.enter--lcp.enter--scale {
+  animation-name: settle;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .enter {

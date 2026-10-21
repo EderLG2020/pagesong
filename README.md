@@ -2,7 +2,9 @@
 
 Landing page para una tienda de audio: hero con audífonos, membresías, catálogo de productos y sección "Nosotros". Hecha con **React 18 + Vite + TypeScript**, sin librerías de UI.
 
-![Vista previa](public/images/headphones.png)
+**Demo:** https://pagesong.netlify.app
+
+![Vista previa](public/og-image.jpg)
 
 ## Características
 
@@ -31,11 +33,12 @@ npm run dev        # http://localhost:5173
 
 ## Variables de entorno
 
-Todas son opcionales y públicas (Vite las incluye en el bundle; no pongas secretos aquí).
+Todas son opcionales y públicas (Vite las incluye en el bundle; no pongas secretos aquí). Los valores por defecto están en `vite.config.ts` (`ENV_DEFAULTS`) y también se usan en `index.html` (`%VITE_*%`).
 
 | Variable | Por defecto | Descripción |
 |---|---|---|
-| `VITE_HERO_IMAGE` | — (muestra un placeholder) | Imagen del hero. Ruta en `public/` (`/images/headphones.png`) o URL absoluta. Mejor PNG/WebP con fondo transparente. |
+| `VITE_SITE_URL` | `https://pagesong.netlify.app` | URL pública, sin `/` final. Se usa en canonical, Open Graph y JSON-LD. |
+| `VITE_HERO_IMAGE` | `/images/headphones.webp` | Imagen del hero. Ruta en `public/` o URL absoluta. Mejor WebP con fondo transparente. Si falla, se muestra un placeholder. |
 | `VITE_BRAND_NAME` | `Pagesong` | Nombre en la barra superior y el pie. |
 | `VITE_CONTACT_PHONE` | `+01 800 25923857` | Teléfono del hero. |
 | `VITE_CONTACT_ADDRESS` | `100 Main St, New York…` | Dirección del hero. |
@@ -53,6 +56,17 @@ El contenido vive en `public/data/` y se puede editar sin tocar código:
 - `about.json` — historia, cifras (se animan solas: `"50k"`, `"4.8"`, `"10+"`…) y valores.
 
 Las imágenes van en `public/images/`.
+
+## SEO y rendimiento
+
+- **Meta etiquetas**: título descriptivo, description, canonical y `theme-color`.
+- **Redes sociales**: Open Graph y Twitter Card con `public/og-image.jpg` (1200×630).
+- **Datos estructurados (JSON-LD)**: `Organization` en `index.html` e `ItemList` de `Product` generado con los productos cargados.
+- **`robots.txt` y `sitemap.xml`** en `public/`. Si cambias de dominio, actualiza también estos dos archivos.
+- **LCP**: la imagen del hero se precarga con `fetchpriority="high"`, es WebP (~17 KB) y su animación de entrada no parte de opacidad 0.
+- **Fuentes propias**: Roboto se sirve desde el sitio con `@fontsource/roboto` (sin Google Fonts bloqueando el render).
+- **CLS**: todas las imágenes declaran `width`/`height`.
+- **Contraste**: textos secundarios ≥ 4.5:1 (WCAG AA).
 
 ## Estructura
 

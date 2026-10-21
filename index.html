@@ -3,12 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>%VITE_BRAND_NAME% | Audífonos y bocinas premium</title>
+    <meta
+      name="description"
+      content="Audífonos inalámbricos, bocinas inteligentes y membresías con envío gratis y garantía extendida. Ritmo y sonido por todo el mundo."
+    />
+    <link rel="canonical" href="%VITE_SITE_URL%/" />
+    <meta name="theme-color" content="#2b2b2b" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="description" content="Ritmo y sonido por todo el mundo" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet" />
-    <title>Ritmo y sonido</title>
+
+    <!-- LCP image + product API: start these early -->
+    <link rel="preload" as="image" href="%VITE_HERO_IMAGE%" fetchpriority="high" />
+    <link rel="preconnect" href="https://dummyjson.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.dummyjson.com" />
+
+    <!-- Open Graph / redes sociales -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="%VITE_BRAND_NAME%" />
+    <meta property="og:title" content="%VITE_BRAND_NAME% | Audífonos y bocinas premium" />
+    <meta
+      property="og:description"
+      content="Audífonos inalámbricos, bocinas inteligentes y membresías con envío gratis y garantía extendida."
+    />
+    <meta property="og:url" content="%VITE_SITE_URL%/" />
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Audífonos negros junto al texto Ritmo y sonido por todo el mundo" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "%VITE_BRAND_NAME%",
+        "url": "%VITE_SITE_URL%/",
+        "logo": "%VITE_SITE_URL%/favicon.svg",
+        "telephone": "%VITE_CONTACT_PHONE%",
+        "address": "%VITE_CONTACT_ADDRESS%"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
